@@ -829,10 +829,7 @@ Use the sections below to quickly navigate through the complete bug summary.
 
 **Evidence:**
 - ![P3-F12 Screenshot](evidence/screenshots/P3-F12_sorting_icon_inconsistent.png)
-
 - [Return to Bug Index](#bug-index)
-
----
 
 ---
 
@@ -879,6 +876,7 @@ Sorting icons remain hidden until hover and appear in a different shape/style wh
 **Evidence:**  
 - ![P3-F14 Screenshot](evidence/screenshots/P3-F14_sorting_icon_hover_issue.gif)  
 - [Return to Bug Index](#bug-index)
+
 
 ---
 
