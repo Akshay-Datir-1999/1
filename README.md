@@ -53,6 +53,8 @@ Use the sections below to quickly navigate through the complete bug summary.
 | [P2-F04](#bug-id-p2-f04) | Sidebar menu does not highlight the selected option |
 | [P2-F05](#bug-id-p2-f05) | Calendar dates are misaligned under incorrect weekday columns |
 | [P2-F06](#bug-id-p2-f06) | My Profile page alignment is inconsistent compared to other sections |
+| [P2-F07](#bug-id-p2-f07) | Barcode field allows longer pasted input than typed input |
+| [P2-F08](#bug-id-p2-f08) | Attendance History displays attendance only on Sundays |
 
 </details>
 
@@ -72,6 +74,9 @@ Use the sections below to quickly navigate through the complete bug summary.
 | [P3-F09](#bug-id-p3-f09) | Clear All button position is inconsistent in Transaction History module |
 | [P3-F10](#bug-id-p3-f10) | Transaction History table has inconsistent header styling and missing sorting arrows |
 | [P3-F11](#bug-id-p3-f11) | Store filter dropdown displays duplicate store names |
+| [P3-F12](#bug-id-p3-f12) | Sorting icons in Store Performance table are inconsistent in size and alignment |
+| [P3-F13](#bug-id-p3-f13) | Date filter accepts invalid date ranges (From Date > To Date) | 
+| [P3-F14](#bug-id-p3-f14) | Sorting icon not visible until hover and appears in inconsistent shape |
 
 
 </details>
@@ -450,7 +455,7 @@ Use the sections below to quickly navigate through the complete bug summary.
 **Actual Result:** Only the Dashboard option remains highlighted at all times.
 
 **Evidence:**
-- [P2-F04 Video](evidence/screenshots/P2-F04_sidebar_highlight_issue.mp4)
+- [P2-F04 Video](evidence/screenshots/P2-F04_sidebar_highlight_issue.gif)
 - [Return to Bug Index](#bug-index)
 
 ---
@@ -496,8 +501,51 @@ Use the sections below to quickly navigate through the complete bug summary.
 **Actual Result:** Content on the My Profile page appears left-aligned and visually uneven.
 
 **Evidence:**
-- [P2-F06 Video](evidence/screenshots/P2-F06_profile_alignment_issue.mp4)
+- [P2-F06 Video](evidence/screenshots/P2-F06_profile_alignment_issue.gif)
 - [Return to Bug Index](#bug-index)
+
+---
+
+## Bug ID: P2-F07
+
+**Title:** Barcode field allows longer pasted input than typed input  
+
+**Module:** Promodizer Portal → Record Sales  
+
+**Description:**  
+- Typing is restricted to 7 characters in the barcode field.
+- But pasting allows 8+ characters, bypassing validation.
+- This inconsistency allows invalid barcodes to be submitted.
+
+**Expected Result:** Field should enforce the same character limit for typing and pasting.
+
+**Actual Result:** Pasting bypasses the character limit.
+
+**Evidence:**  
+- ![P2-F07 Screenshot](evidence/screenshots/P2-F07_barcode_paste_limit_issue.gif)  
+- [Return to Bug Index](#bug-index)
+
+---
+
+## Bug ID: P2-F08
+
+**Title:** Attendance History displays attendance only on Sundays  
+
+**Module:** Promodizer Portal → Attendance  
+
+**Description:**  
+- Attendance entries appear only on Sundays.
+- All other days remain blank even after attendance is marked.
+- Incorrect date rendering affects attendance accuracy.
+
+**Expected Result:** Attendance records should display on correct dates.
+
+**Actual Result:** Attendance shows only on Sundays; other days empty.
+
+**Evidence:**  
+- ![P2-F08 Screenshot](evidence/screenshots/P2-F08_attendance_only_sundays.png)  
+- [Return to Bug Index](#bug-index)
+
 
 ---
 
@@ -569,7 +617,7 @@ Use the sections below to quickly navigate through the complete bug summary.
 **Actual Result:** Active remains selected after clearing, and combined selection shows only Inactive results.
 
 **Evidence:**
-- [P3-F03 Video](evidence/screenshots/P3-F03_status_filter_issue.mp4)
+- [P3-F03 Video](evidence/screenshots/P3-F03_status_filter_issue.gif)
 - [Return to Bug Index](#bug-index)
 
 ---
@@ -760,6 +808,77 @@ Use the sections below to quickly navigate through the complete bug summary.
 - [P3-F09 Screenshot](evidence/screenshots/P3-F11_duplicate_store_dropdown.png)
 - [Return to Bug Index](#bug-index)
 
+---
+
+
+## Bug ID: P3-F12
+
+**Title:** Sorting icons in Store Performance table are inconsistent in size and alignment
+
+**Module:** Sales Analytics Dashboard → Store Performance → Table Header
+
+**Description:**
+- The sorting icons (↑↓) displayed in the table headers such as **City**, **Total Quantity Sold**, **Total Transactions**, and **SKUs Sold** are not uniform in size.
+- Some sorting icons appear smaller, while others appear larger or misaligned compared to the rest.
+- This creates a visually inconsistent table header and affects UI clarity.
+- The inconsistent icon size makes the sorting controls look unbalanced and reduces readability.
+
+**Expected Result:** All sorting icons should be displayed in a uniform size, style, and alignment across all table columns.
+
+**Actual Result:** Sorting icons differ in size and alignment across multiple header columns, causing uneven UI presentation.
+
+**Evidence:**
+- ![P3-F12 Screenshot](evidence/screenshots/P3-F12_sorting_icon_inconsistent.png)
+
+- [Return to Bug Index](#bug-index)
+
+---
+
+---
+
+## Bug ID: P3-F13
+
+**Title:** Date filter accepts invalid date ranges (From Date > To Date)  
+
+**Module:** Sales Analytics Dashboard → Date Filters  
+
+**Description:**  
+- User can select a From Date later than the To Date.
+- System does not warn or block invalid ranges.
+- This results in incorrect filtering and empty data.
+
+**Expected Result:** System should validate dates and block invalid ranges.
+
+**Actual Result:** Invalid date ranges are accepted without error.
+
+**Evidence:**  
+- ![P3-F13 Screenshot](evidence/screenshots/P3-F13_invalid_date_range.png)  
+- [Return to Bug Index](#bug-index)
+
+---
+
+## Bug ID: P3-F14
+
+**Title:** Sorting icon not visible until hover and appears in inconsistent shape  
+
+**Module:** Sales Analytics Dashboard → SKU Performance → Table Header  
+
+**Description:**  
+- Sorting icons (↑↓) for columns in the SKU Performance table are **not visible by default**.  
+- The icons appear **only when hovering** over the column header.  
+- When they appear on hover, the icons have a **different shape and style** compared to other tables in the system.  
+- This creates UI inconsistency and makes it unclear to the user that sorting is available.  
+- Users may assume sorting is not supported because the icon is hidden initially.
+
+**Expected Result:**  
+Sorting icons should be consistently visible across all sortable columns and maintain a uniform style.
+
+**Actual Result:**  
+Sorting icons remain hidden until hover and appear in a different shape/style when displayed.
+
+**Evidence:**  
+- ![P3-F14 Screenshot](evidence/screenshots/P3-F14_sorting_icon_hover_issue.gif)  
+- [Return to Bug Index](#bug-index)
 
 ---
 
@@ -850,7 +969,7 @@ Use the sections below to quickly navigate through the complete bug summary.
 **Actual Result:** System redirects to details page but stays stuck on loading and shows no data.
 
 **Evidence:**
-- [P4-F04 Video](evidence/screenshots/P4-F04_sales_history_redirect_issue.MP4)
+- [P4-F04 Video](evidence/screenshots/P4-F04_sales_history_redirect_issue.gif)
 - [Return to Bug Index](#bug-index)
 
 ---
@@ -872,7 +991,7 @@ Use the sections below to quickly navigate through the complete bug summary.
 **Actual Result:** Cancel button works only when fields contain values; does nothing when fields are empty.
 
 **Evidence:**
-- [P4-F05 Video](evidence/screenshots/P4-F05_cancel_button_not_working_empty_form.MP4)
+- [P4-F05 Video](evidence/screenshots/P4-F05_cancel_button_not_working_empty_form.gif)
 - [Return to Bug Index](#bug-index)
 
 ---
@@ -916,7 +1035,7 @@ Use the sections below to quickly navigate through the complete bug summary.
 **Actual Result:** Button redirects to the Add Promodizer window instead of the Add Store screen.
 
 **Evidence:**
-- [P4-F07 Video](evidence/screenshots/P4-F07_addstore_redirects_to_addpromodizer.MP4)
+- [P4-F07 Video](evidence/screenshots/P4-F07_addstore_redirects_to_addpromodizer.gif)
 - [Return to Bug Index](#bug-index)
 
 
@@ -961,7 +1080,7 @@ Use the sections below to quickly navigate through the complete bug summary.
 **Actual Result:** "View Team" takes several seconds to load and shows no content initially.
 
 **Evidence:**
-- [P4-F09 Screenshot](evidence/screenshots/P4-F09_view_team_slow_loading.MP4)
+- [P4-F09 Screenshot](evidence/screenshots/P4-F09_view_team_slow_loading.gif)
 - [Return to Bug Index](#bug-index)
 
 ---
@@ -1029,7 +1148,7 @@ Use the sections below to quickly navigate through the complete bug summary.
 **Actual Result:** Only the first 6 records are visible, and no pagination controls are provided.
 
 Evidence:
-- [P4-F11 Screenshot](evidence/screenshots/P4-F12_missing_pagination_sales_history.png)
+- [P4-F12 Screenshot](evidence/screenshots/P4-F12_missing_pagination_sales_history.png)
 - [Return to Bug Index](#bug-index)
 
 ---
