@@ -522,7 +522,7 @@ Use the sections below to quickly navigate through the complete bug summary.
 **Actual Result:** Pasting bypasses the character limit.
 
 **Evidence:**  
-- ![P2-F07 Screenshot](evidence/screenshots/P2-F07_barcode_paste_limit_issue.gif)  
+- [P2-F07 Screenshot](evidence/screenshots/P2-F07_barcode_paste_limit_issue.gif)  
 - [Return to Bug Index](#bug-index)
 
 ---
@@ -874,7 +874,7 @@ Sorting icons should be consistently visible across all sortable columns and mai
 Sorting icons remain hidden until hover and appear in a different shape/style when displayed.
 
 **Evidence:**  
-- ![P3-F14 Screenshot](evidence/screenshots/P3-F14_sorting_icon_hover_issue.gif)  
+- [P3-F14 Screenshot](evidence/screenshots/P3-F14_sorting_icon_hover_issue.gif)  
 - [Return to Bug Index](#bug-index)
 
 
