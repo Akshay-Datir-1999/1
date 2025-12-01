@@ -787,7 +787,7 @@ Use the sections below to quickly navigate through the complete bug summary.
 
 ---
 
-**Bug ID:** P3-F11
+## Bug ID: P3-F11
 
 **Title:** Store filter dropdown displays duplicate store names
 
