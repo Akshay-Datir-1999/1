@@ -120,10 +120,10 @@ Use the sections below to quickly navigate through the complete bug summary.
 
 ## Module Navigation (Jump to Any Section)
 
-- **[Module 1: Management Portal Bugs](#module1-gtvl-management-portal-bugs)**
-- **[Module 2: Promodizer Portal Bugs](#module2-gtvl-promodizer-portal-bugs)**
-- **[Module 3: Store Performance Analysis Bugs](#module3-gtvl-store-performance-analysis-bugs)**
-- **[Module 4: Supervisor Portal Bugs](#module4-gtvl-supervisor-portal-bugs)**
+<a id="module1-gtvl-management-portal-bugs"></a>
+<a id="module2-gtvl-promodizer-portal-bugs"></a>
+<a id="module3-gtvl-store-performance-analysis-bugs"></a>
+<a id="module4-gtvl-supervisor-portal-bugs"></a>
 
 ---
 <h1 align="center">DAY-1</h1>
