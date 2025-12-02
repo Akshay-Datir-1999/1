@@ -39,6 +39,13 @@ Use the sections below to quickly navigate through the complete bug summary.
 | [P1-F08](#bug-id-p1-f08) | Supervisor First Name and Last Name fields accept numbers and duplicates |
 | [P1-F09](#bug-id-p1-f09) | Promodizer Edit form allows changes but does not save updates |
 | [P1-F10](#bug-id-p1-f10) | Promodizer First Name and Last Name fields accept numeric input |
+| [P1-F11](#bug-id-p1-f11) | SKU remains visible after deletion until page refresh |
+| [P1-F12](#bug-id-p1-f12) | No success message after deleting SKU |
+| [P1-F13](#bug-id-p1-f13) | Status label inconsistent (“active” vs “Active”) |
+| [P1-F14](#bug-id-p1-f14) | Import button uses wrong icon (Export icon shown) |
+| [P1-F15](#bug-id-p1-f15) | Radio button shows extra square box when selected |
+| [P1-F16](#bug-id-p1-f16) | Chatbot icon overlaps action buttons |
+| [P1-F17](#bug-id-p1-f17) | GTVL icon color mismatch across portals |
 
 </details>
 
@@ -55,6 +62,8 @@ Use the sections below to quickly navigate through the complete bug summary.
 | [P2-F06](#bug-id-p2-f06) | My Profile page alignment is inconsistent compared to other sections |
 | [P2-F07](#bug-id-p2-f07) | Barcode field allows longer pasted input than typed input |
 | [P2-F08](#bug-id-p2-f08) | Attendance History displays attendance only on Sundays |
+| [P2-F09](#bug-id-p2-f09) | Dashboard icons not following theme (inconsistent colors) |
+| [P2-F10](#bug-id-p2-f10) | Dropdown misaligned in mobile view |
 
 </details>
 
@@ -77,6 +86,10 @@ Use the sections below to quickly navigate through the complete bug summary.
 | [P3-F12](#bug-id-p3-f12) | Sorting icons in Store Performance table are inconsistent in size and alignment |
 | [P3-F13](#bug-id-p3-f13) | Date filter accepts invalid date ranges (From Date > To Date) | 
 | [P3-F14](#bug-id-p3-f14) | Sorting icon not visible until hover and appears in inconsistent shape |
+| [P3-F15](#bug-id-p3-f15) | Store Performance chart not visible on desktop view |
+| [P3-F16](#bug-id-p3-f16) | Transaction History table fluctuates during sorting |
+| [P3-F17](#bug-id-p3-f17) | SKU Performance sorting icon behavior not standard |
+| [P3-F18](#bug-id-p3-f18) | Supervisor Assignment Stores missing labels & checkboxes |
 
 
 </details>
@@ -360,6 +373,160 @@ Use the sections below to quickly navigate through the complete bug summary.
 
 ---
 
+## Bug ID: P1-F11
+
+**Title:** SKU remains visible after deletion until page refresh
+
+**Module:** Management Portal → SKU Management
+
+**Description:**
+- After deleting an SKU, the record continues to appear in the table.
+- The user must manually refresh the page to see updated changes.
+- This creates confusion about whether the deletion succeeded.
+- May cause repeated unnecessary delete attempts.
+
+**Expected Result:** Deleted SKU should disappear immediately from the list.
+
+**Actual Result:** SKU stays visible until manual page refresh.
+
+**Evidence:**
+- [P1-F11 Screenshot](evidence/screenshots/P1-F11_sku_visible_after_delete.gif)
+- [Return to Bug Index](#bug-index)
+
+---
+
+## Bug ID: P1-F12
+
+**Title:** No success message after deleting SKU
+
+**Module:** Management Portal → SKU Management
+
+**Description:**
+- When the user deletes an SKU, no confirmation popup or toast message is shown.
+- The system provides no feedback about whether the deletion succeeded.
+- This forces users to manually verify by refreshing the page.
+- Creates uncertainty and poor user experience.
+
+**Expected Result:** A “SKU deleted successfully” message should appear.
+
+**Actual Result:** No success notification is displayed.
+
+**Evidence:**
+- [P1-F12 Screenshot](evidence/screenshots/P1-F12_no_delete_success_message.gif)
+- [Return to Bug Index](#bug-index)
+
+---
+
+## Bug ID: P1-F15
+
+**Title:** Status label inconsistent (“active” vs “Active”)
+
+**Module:** Management Portal → SKU List
+
+**Description:**
+- The status label appears in different formats across modules.
+- Some places show lowercase “active”, others show “Active”.
+- Inconsistent UI text formatting reduces professionalism.
+- A unified style is required for coherence.
+
+**Expected Result:** Status labels should follow a consistent capitalization format.
+
+**Actual Result:** Status text varies between pages.
+
+**Evidence:**
+- [P1-F13 Screenshot](evidence/screenshots/P1-F13_status_inconsistent.gif)
+- [Return to Bug Index](#bug-index)
+
+---
+
+## Bug ID: P1-F14
+
+**Title:** Import button uses wrong icon (Export icon shown)
+
+**Module:** Management Portal → SKU Management
+
+**Description:**
+- The Import button incorrectly uses an export-style arrow icon.
+- This causes confusion about the action’s actual purpose.
+- Button icon mapping is incorrect and inconsistent with function.
+- Creates misunderstanding among users.
+
+**Expected Result:** Import button should show a correct import icon.
+
+**Actual Result:** Export icon is displayed for Import.
+
+**Evidence:**
+- [P1-F14 Screenshot](evidence/screenshots/P1-F14_import_wrong_icon.png)
+- [Return to Bug Index](#bug-index)
+
+---
+
+## Bug ID: P1-F15
+
+**Title:** Radio button shows extra square box when selected
+
+**Module:** Management Portal → Add/Edit Forms
+
+**Description:**
+- When clicking the Active/Inactive radio option, an extra square box appears around the selected element.
+- This looks like a CSS overflow or outline issue.
+- The UI becomes visually inconsistent and distracting.
+- Not aligned with the design system used across other modules.
+
+**Expected Result:** Only the radio circle should highlight during selection.
+
+**Actual Result:** Extra square highlight box appears.
+
+**Evidence:**
+- [P1-F15 Screenshot](evidence/screenshots/P1-F15_radio_square_issue.png)
+- [Return to Bug Index](#bug-index)
+
+---
+
+## Bug ID: P1-F16
+
+**Title:** Chatbot icon overlaps action buttons
+
+**Module:** Management Portal → Global UI Component
+
+**Description:**
+- The floating chatbot widget overlaps Edit/Delete buttons and pagination components.
+- Users cannot click underlying elements unless they reposition the chatbot.
+- This severely impacts usability and task completion flow.
+- The bot should avoid covering critical interactive areas.
+
+**Expected Result:** Chatbot icon should not obstruct functional elements.
+
+**Actual Result:** Icon overlaps key UI controls.
+
+**Evidence:**
+- [P1-F16 Screenshot](evidence/screenshots/P1-F16_chatbot_overlapping.png)
+- [Return to Bug Index](#bug-index)
+
+---
+
+## Bug ID: P1-F17
+
+**Title:** GTVL icon color mismatch across portals
+
+**Module:** Management Portal / Promodizer Portal / Supervisor Portal
+
+**Description:**
+- The GTVL branding icon shows different color tones in each portal.
+- This breaks visual consistency of branding.
+- Users experience an inconsistent visual theme.
+- Branding elements should remain uniform across all modules.
+
+**Expected Result:** Same icon color across all portals.
+
+**Actual Result:** Icon color varies between modules.
+
+**Evidence:**
+- [P1-F17 Screenshot](evidence/screenshots/P1-F17_gtvl_icon_mismatch.gif)
+- [Return to Bug Index](#bug-index)
+
+---
+
 <h1 align="center">DAY-3</h1>
 
 ---
@@ -543,9 +710,52 @@ Use the sections below to quickly navigate through the complete bug summary.
 **Actual Result:** Attendance shows only on Sundays; other days empty.
 
 **Evidence:**  
-- ![P2-F08 Screenshot](evidence/screenshots/P2-F08_attendance_only_sundays.png)  
+- [P2-F08 Screenshot](evidence/screenshots/P2-F08_attendance_only_sundays.png)  
 - [Return to Bug Index](#bug-index)
 
+---
+
+## Bug ID: P2-F09
+
+**Title:** Dashboard icons not following theme (inconsistent colors)
+
+**Module:** Promodizer Portal → Dashboard
+
+**Description:**
+- The Dashboard tiles use inconsistent icon colors.
+- Some icons appear green, while others turn grey on hover.
+- The theme does not match the system’s UI style used in other portals.
+- Creates a lack of visual cohesion and inconsistent brand feel.
+
+**Expected Result:** Dashboard icons should follow a consistent style and color theme.
+
+**Actual Result:** Icons display mismatched colors and hover styles.
+
+**Evidence:**
+- [P2-F09 Screenshot](evidence/screenshots/P2-F09_dashboard_icon_inconsistent.png)
+- [Return to Bug Index](#bug-index)
+
+---
+
+## Bug ID: P2-F10
+
+**Title:** Dropdown misaligned in mobile view
+
+**Module:** Promodizer Portal → All Dropdowns
+
+**Description:**
+- In mobile layout, dropdown menus appear outside the visible container.
+- The dropdown list extends off-screen, making items hard or impossible to select.
+- UI scaling issues cause fields to overlap other elements.
+- This severely impacts usability on smaller screens.
+
+**Expected Result:** Dropdowns should resize and align correctly on mobile devices.
+
+**Actual Result:** Dropdown lists appear cut off and misaligned in mobile view.
+
+**Evidence:**
+- [P2-F10 Screenshot](evidence/screenshots/P2-F10_dropdown_mobile_misaligned.png)
+- [Return to Bug Index](#bug-index)
 
 ---
 
@@ -828,7 +1038,7 @@ Use the sections below to quickly navigate through the complete bug summary.
 **Actual Result:** Sorting icons differ in size and alignment across multiple header columns, causing uneven UI presentation.
 
 **Evidence:**
-- ![P3-F12 Screenshot](evidence/screenshots/P3-F12_sorting_icon_inconsistent.png)
+- [P3-F12 Screenshot](evidence/screenshots/P3-F12_sorting_icon_inconsistent.png)
 - [Return to Bug Index](#bug-index)
 
 ---
@@ -849,7 +1059,7 @@ Use the sections below to quickly navigate through the complete bug summary.
 **Actual Result:** Invalid date ranges are accepted without error.
 
 **Evidence:**  
-- ![P3-F13 Screenshot](evidence/screenshots/P3-F13_invalid_date_range.png)  
+- [P3-F13 Screenshot](evidence/screenshots/P3-F13_invalid_date_range.png)  
 - [Return to Bug Index](#bug-index)
 
 ---
@@ -877,6 +1087,93 @@ Sorting icons remain hidden until hover and appear in a different shape/style wh
 - [P3-F14 Screenshot](evidence/screenshots/P3-F14_sorting_icon_hover_issue.gif)  
 - [Return to Bug Index](#bug-index)
 
+---
+
+## Bug ID: P3-F15
+
+**Title:** Store Performance chart not visible on desktop view
+
+**Module:** Sales Analytics Dashboard → Store Performance → Chart View
+
+**Description:**
+- The Store Performance chart does not load or render on desktop screens.
+- The chart area remains blank even after clicking multiple times.
+- The same chart loads correctly on mobile view, but not on desktop.
+- This breaks the analytics workflow and prevents desktop users from visual data analysis.
+
+**Expected Result:** The Store Performance chart should load properly on desktop and mobile devices.
+
+**Actual Result:** The chart appears only on mobile view and remains invisible on desktop.
+
+**Evidence:**
+- [P3-F15 Screenshot](evidence/screenshots/P3-F15_chart_not_visible_desktop.png)
+- [Return to Bug Index](#bug-index)
+
+---
+
+## Bug ID: P3-F16
+
+**Title:** Transaction History table fluctuates during sorting
+
+**Module:** Sales Analytics Dashboard → Transaction History → Table
+
+**Description:**
+- When clicking the sorting icons in any column, the entire table layout jumps or fluctuates.
+- The headers and rows shift position temporarily.
+- This creates a distracting and unstable UI experience.
+- Sorting should smoothly reorder rows without shaking the table layout.
+
+**Expected Result:** Table should remain stable and only reorder rows during sorting.
+
+**Actual Result:** Table layout visibly fluctuates each time sorting is applied.
+
+**Evidence:**
+- [P3-F16 Screenshot](evidence/screenshots/P3-F16_table_fluctuates_on_sorting.gif)
+- [Return to Bug Index](#bug-index)
+
+---
+
+## Bug ID: P3-F17
+
+**Title:** SKU Performance sorting icon behavior not standard (visible only on click)
+
+**Module:** Sales Analytics Dashboard → SKU Performance → Table
+
+**Description:**
+- Sorting icons are not visible by default in the table headers.
+- Icons appear only after clicking the header instead of being always visible.
+- This behavior is inconsistent with other tables in the system.
+- Users may assume sorting is not available due to hidden icons.
+
+**Expected Result:** Sorting icons should be consistently visible across all sortable columns.
+
+**Actual Result:** Icons remain hidden until clicked and use a different style compared to other modules.
+
+**Evidence:**
+- [P3-F17 Screenshot](evidence/screenshots/P3-F17_sorting_icon_visible_on_click.gif)
+- [Return to Bug Index](#bug-index)
+
+---
+
+## Bug ID: P3-F18
+
+**Title:** Supervisor Assignment Stores missing labels & checkboxes
+
+**Module:** Sales Analytics Dashboard → Store Performance → Assignment Stores
+
+**Description:**
+- The Assignment Stores section contains no checkbox UI elements.
+- The search bar also does not include a title or label.
+- Other filter sections contain consistent labels and checkbox styling.
+- This inconsistency creates confusion and makes the section appear incomplete.
+
+**Expected Result:** Assignment Stores should include labeled checkboxes matching project UI standards.
+
+**Actual Result:** Label text is missing and checkboxes are not displayed.
+
+**Evidence:**
+- [P3-F18 Screenshot](evidence/screenshots/P3-F18_assignment_store_missing_labels.png)
+- [Return to Bug Index](#bug-index)
 
 ---
 
