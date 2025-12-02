@@ -120,7 +120,6 @@ Use the sections below to quickly navigate through the complete bug summary.
 
 ## Module Navigation (Jump to Any Section)
 
-
 - **[Module 1: Management Portal Bugs](#module1-gtvl-management-portal-bugs)**
 - **[Module 2: Promodizer Portal Bugs](#module2-gtvl-promodizer-portal-bugs)**
 - **[Module 3: Store Performance Analysis Bugs](#module3-gtvl-store-performance-analysis-bugs)**
