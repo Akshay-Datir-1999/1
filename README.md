@@ -37,7 +37,7 @@ This project demonstrates real-world Azure integration aligned with the AZ-204 c
 - Implemented GitHub Actions CI/CD
 - Configured branch protection rules
 
-###  Vikrant – Frontend Engineer
+###  Vikrant – Frontend 
 - Developed Angular 17 application
 - Built Upload UI (Drag & Drop)
 - Built Document List UI
@@ -49,11 +49,11 @@ This project demonstrates real-world Azure integration aligned with the AZ-204 c
 ##  Architecture
 
 Angular Frontend (Port 4200)  
-⬇  
+           | 
 .NET 8 Web API (Port 5251)  
-⬇  
+           |
 Azure Blob Storage (File Storage)  
-⬇  
+           |
 Azure Cosmos DB (Metadata Storage)
 
 ---
@@ -205,11 +205,11 @@ Rules:
 
 ##  Day 1 Goal Achieved
 
-✔ Secure file upload system  
-✔ Azure storage integration  
-✔ Metadata persistence  
-✔ Angular + .NET integration  
-✔ CI/CD pipeline configured  
+- Secure file upload system  
+- Azure storage integration  
+- Metadata persistence  
+- Angular + .NET integration  
+- CI/CD pipeline configured  
 
 ---
 
@@ -225,8 +225,6 @@ DocVault demonstrates a real-world full-stack cloud application integrating:
 - Professional DevOps workflow
 
 This completes Day 1 of the AZ-204 Capstone Project.
-
----
 
 #  DocVault – Day 2 (Security, Identity & Secret Management)
 
@@ -455,14 +453,14 @@ http://localhost:5251/swagger
 
 ##  Day 2 Goals Achieved
 
-✔ Microsoft Entra ID authentication  
-✔ JWT validation  
-✔ User-based isolation  
-✔ Azure Key Vault integration  
-✔ Managed Identity implementation  
-✔ Zero credential backend  
-✔ Secure search functionality  
-✔ CI/CD pipeline passing  
+- Microsoft Entra ID authentication  
+- JWT validation  
+- User-based isolation  
+- Azure Key Vault integration  
+- Managed Identity implementation  
+- Zero credential backend  
+- Secure search functionality  
+- CI/CD pipeline passing  
 
 ---
 
@@ -471,5 +469,4 @@ http://localhost:5251/swagger
 Day 2 successfully upgraded DocVault from a basic cloud application to a secure, enterprise-ready Azure solution.
 
 Security, identity management, and secret protection are now implemented according to AZ-204 certification standards.
-
 
