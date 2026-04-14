@@ -172,16 +172,18 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 5. Run backend
+### 5. Run the application (backend + frontend together)
 ```bash
 python app.py
 ```
 
-### 6. Run frontend
-Current build uses Flask-rendered templates served by the same backend process. Open:
+### 6. Open frontend in browser
+This project currently serves both API and UI from the same Flask process. No separate frontend server is required.
+
+Open:
 - http://127.0.0.1:5000
 
-If you later migrate to React, run frontend dev server separately and connect it to Flask APIs.
+If you later migrate to a standalone React app, then run frontend and backend as separate services.
 
 ## 📊 9. Future Improvements
 
